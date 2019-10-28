@@ -35,3 +35,11 @@ Delete email.
 ```
 $mailchimp->delete('me@world.com');
 ```
+
+## API Reference
+
+This plugin is built on API calls to mailchimp.com. Check out there reference to continue working on this plugin.
+
+https://mailchimp.com/developer/reference/
+
+Lists/Audiences, Members, Add a new list member.
