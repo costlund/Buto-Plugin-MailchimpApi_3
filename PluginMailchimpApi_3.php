@@ -1,14 +1,16 @@
 <?php
 class PluginMailchimpApi_3{
   private $settings = null;
+  private $data = null;
   private $list_id = null;
   private $api_key = null;
   private $data_center = null;
   function __construct() {
     $this->settings = wfPlugin::getPluginSettings('mailchimp/api_3', true);
-    $this->list_id = $this->settings->get('data/list_id');
-    $this->api_key = $this->settings->get('data/api_key');
-    $this->data_center = substr($this->settings->get('data/api_key'), strpos($this->settings->get('data/api_key'), '-')+1);
+    $this->data = new PluginWfArray(wfSettings::getSettingsFromYmlString($this->settings->get('data')));
+    $this->list_id = $this->data->get('list_id');
+    $this->api_key = $this->data->get('api_key');
+    $this->data_center = substr($this->data->get('api_key'), strpos($this->data->get('api_key'), '-')+1);
   }
   public function add($email){
     /**

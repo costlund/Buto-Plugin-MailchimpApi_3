@@ -6,9 +6,12 @@ Add or remove email from a Mailchimp list.
 plugin:
   mailchimp:
     api_3:
-      data:
-        list_id: _check_Audience_Settings_in_Mailchimp_
-        api_key: _Mailchimp_API_KEY_
+      data: 'yml:/../buto_data/theme/[theme]/_data_file_.yml'
+```
+Data file.
+```
+list_id: _check_Audience_Settings_in_Mailchimp_
+api_key: _Mailchimp_API_KEY_
 ```
 
 ### API key
