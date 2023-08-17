@@ -10,7 +10,7 @@ class PluginMailchimpApi_3{
     $this->data = new PluginWfArray(wfSettings::getSettingsFromYmlString($this->settings->get('data')));
     $this->list_id = $this->data->get('list_id');
     $this->api_key = $this->data->get('api_key');
-    $this->data_center = substr($this->data->get('api_key'), strpos($this->data->get('api_key'), '-')+1);
+    $this->data_center = wfPhpfunc::substr($this->data->get('api_key'), strpos($this->data->get('api_key'), '-')+1);
   }
   public function add($email){
     /**
